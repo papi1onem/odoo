@@ -72,7 +72,7 @@ if hasattr(time, 'tzset'):
 # because some pdf won't fit into allocated memory
 # https://docs.python.org/3/library/zlib.html#zlib.decompressobj
 # ----------------------------------------------------------
-import PyPDF2
+import pyPdf
 
 try:
     import zlib
