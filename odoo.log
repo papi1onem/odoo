@@ -1,0 +1,48 @@
+2023-03-12 10:30:48,253 1620 INFO ? odoo: Odoo version 16.0 
+2023-03-12 10:30:48,253 1620 INFO ? odoo: Using configuration file at c:\Users\mimim\Documents\odoo\odoo.conf 
+2023-03-12 10:30:48,253 1620 INFO ? odoo: addons paths: ['c:\\Users\\mimim\\Documents\\odoo\\odoo\\addons', 'c:\\users\\mimim\\appdata\\local\\openerp s.a\\odoo\\addons\\16.0', 'c:\\users\\mimim\\documents\\odoo\\odoo\\addons', 'c:\\users\\mimim\\documents\\odoo\\addons'] 
+2023-03-12 10:30:48,253 1620 INFO ? odoo: database: cashplus@localhost:5432 
+2023-03-12 10:30:48,419 1620 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2023-03-12 10:30:48,559 1620 CRITICAL ? odoo.modules.module: Couldn't load module web 
+2023-03-12 10:30:48,560 1620 CRITICAL ? odoo.modules.module: No module named 'cryptography.hazmat.backends.openssl.x509' 
+2023-03-12 10:30:48,560 1620 ERROR ? odoo.service.server: Failed to load server-wide module `web`.
+The `web` module is provided by the addons found in the `openerp-web` project.
+Maybe you forgot to add those addons in your addons_path configuration. 
+Traceback (most recent call last):
+  File "c:\Users\mimim\Documents\odoo\odoo\service\server.py", line 1248, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "c:\Users\mimim\Documents\odoo\odoo\modules\module.py", line 432, in load_openerp_module
+    __import__('odoo.addons.' + module_name)
+  File "c:\users\mimim\documents\odoo\addons\web\__init__.py", line 4, in <module>
+    from . import controllers
+  File "c:\users\mimim\documents\odoo\addons\web\controllers\__init__.py", line 5, in <module>
+    from . import database
+  File "c:\users\mimim\documents\odoo\addons\web\controllers\database.py", line 19, in <module>
+    from odoo.addons.base.models.ir_qweb import render as qweb_render
+  File "c:\Users\mimim\Documents\odoo\odoo\addons\base\__init__.py", line 5, in <module>
+    from . import models
+  File "c:\Users\mimim\Documents\odoo\odoo\addons\base\models\__init__.py", line 21, in <module>
+    from . import ir_mail_server
+  File "c:\Users\mimim\Documents\odoo\odoo\addons\base\models\ir_mail_server.py", line 22, in <module>
+    from urllib3.contrib.pyopenssl import PyOpenSSLContext
+  File "C:\Users\mimim\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\contrib\pyopenssl.py", line 53, in <module>
+    from cryptography.hazmat.backends.openssl.x509 import _Certificate
+ModuleNotFoundError: No module named 'cryptography.hazmat.backends.openssl.x509'
+2023-03-12 10:30:48,565 1620 CRITICAL ? odoo.modules.module: Couldn't load module base 
+2023-03-12 10:30:48,565 1620 CRITICAL ? odoo.modules.module: No module named 'cryptography.hazmat.backends.openssl.x509' 
+2023-03-12 10:30:48,565 1620 ERROR ? odoo.service.server: Failed to load server-wide module `base`. 
+Traceback (most recent call last):
+  File "c:\Users\mimim\Documents\odoo\odoo\service\server.py", line 1248, in load_server_wide_modules
+    odoo.modules.module.load_openerp_module(m)
+  File "c:\Users\mimim\Documents\odoo\odoo\modules\module.py", line 432, in load_openerp_module
+    __import__('odoo.addons.' + module_name)
+  File "c:\Users\mimim\Documents\odoo\odoo\addons\base\__init__.py", line 5, in <module>
+    from . import models
+  File "c:\Users\mimim\Documents\odoo\odoo\addons\base\models\__init__.py", line 21, in <module>
+    from . import ir_mail_server
+  File "c:\Users\mimim\Documents\odoo\odoo\addons\base\models\ir_mail_server.py", line 22, in <module>
+    from urllib3.contrib.pyopenssl import PyOpenSSLContext
+  File "C:\Users\mimim\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\contrib\pyopenssl.py", line 53, in <module>
+    from cryptography.hazmat.backends.openssl.x509 import _Certificate
+ModuleNotFoundError: No module named 'cryptography.hazmat.backends.openssl.x509'
+2023-03-12 10:30:48,574 1620 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-KBJ68AM:8069 
